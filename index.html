@@ -31,7 +31,7 @@
             </div>
             <a href=""><img src="img/user.svg" alt="" class="header-button" id="userbutton"></a>
             <a href=""><img src="img/heart.svg" alt="" class="header-button" id="favoritebutton"></a>
-            <a href=""><img src="img/settings.svg" alt="" class="header-button"id="settingsbutton"></a>
+            <img src="img/settings.svg" alt="" class="header-button" id="settingsbutton">
             <a href=""><img src="img/cart.svg" alt="" class="header-button" id="cartbutton"></a>
         </div>
     </section>
@@ -42,25 +42,59 @@
             <span>Меню</span>
         </a>
 
-        <a href="" class="mobile-gui-button">
-            <img src="img/home.svg" alt="">
-            <span>Головна</span>
-        </a>
-
-        <a href="" class="mobile-gui-button">
+        <div class="mobile-gui-button" id="catalog-mobile">
             <img src="img/grid.svg" alt="">
             <span>Каталог</span>
-        </a>
-
+        </div>
+        
         <a href="" class="mobile-gui-button">
             <img src="img/heart.svg" alt="">
             <span>Обрані</span>
         </a>
+        
+        <div class="mobile-gui-button" id="mobilesettingsbutton">
+            <img src="img/settings.svg" alt="">
+            <span>Налаштування</span>
+        </div>
 
         <a href="" class="mobile-gui-button">
             <img src="img/cart.svg" alt="">
             <span>Кошик</span>
         </a>
     </section>
+
+    <section class="lang-select none">
+        <div class="language-links">
+            <img src="img/cross.svg" class="close-lang">
+            <h1>Оберіть мову</h1>
+            <div class="flexbox">
+                <a href="" class="langlink">
+                    <span>UA</span>
+                    <img src="img/ukraine.svg">
+                </a>
+
+                <a href="" class="langlink">
+                    <span>EN</span>
+                    <img src="img/united-kingdom.svg">
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="langlink">
+                    <span>RU</span>
+                    <img src="img/russia.svg">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <img src="img/cross.svg" class="close-catalog">
+        <h1>Каталог</h1>
+    </section>
+
+    <section class="settings">
+        <img src="img/cross.svg" class="close-settings">
+        <h1>Налаштування</h1>
+    </section>
 </body>
+<script src="script.js"></script>
 </html>
