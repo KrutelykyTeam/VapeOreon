@@ -1,0 +1,47 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.main{
+  width: 88vw;
+  margin: auto;
+}
+.carousel{
+  width: 1200px !important;
+  height: 520px !important;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.carousel a{
+  cursor: default !important;
+  transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.carousel img{
+  z-index: 0;
+}
+.carousel-arrow-left, .carousel-arrow-right{
+  width: 35px;
+  height: 35px;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: url(img/arrow.svg);
+}
+.carousel-arrow-left:hover, .carousel-arrow-right:hover{
+  background: url(img/arrow-hover.svg);
+}
+.carousel-arrow-left{
+  top: calc((100% - 50px) / 2);
+  left: 15px;
+  
+}
+.carousel-arrow-right{
+  top: calc((100% - 50px) / 2);
+  right: 15px;
+  transform: rotateY(180deg);
+}
