@@ -5,22 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vape Oreon</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
 </head>
 <body>
+    <section class="header">
+        <div class="gap15">
+            <img src="img/logo.svg" alt="logo" class="logo">
+            <h1>Vape Oreon</h1>
+            <div id="catalog">
+                <img src="img/grid.svg">
+                <span>Каталог</span>
+            </div>
+        </div>
+        
+        <div class="search">
+            <img src="img/search.svg" alt="">
+            <input type="text" class="search-field" placeholder="Я шукаю...">
+            <div class="search-button">Search</div>
+        </div>
+        
+        <div class="gap15">
+            <div class="lang header-button">
+                <h3>UA</h3>
+                <img src="img/ukraine.svg" alt="" class="planet">
+            </div>
+            <a href=""><img src="img/user.svg" alt="" class="header-button" id="userbutton"></a>
+            <a href=""><img src="img/heart.svg" alt="" class="header-button" id="favoritebutton"></a>
+            <img src="img/settings.svg" alt="" class="header-button" id="settingsbutton">
+            <a href=""><img src="img/cart.svg" alt="" class="header-button" id="cartbutton"></a>
+        </div>
+    </section>
+
+    <section class="mobile-gui">
+        <a href="" class="mobile-gui-button">
+            <img src="img/menu.svg" alt="">
+            <span>Меню</span>
+        </a>
+
+        <div class="mobile-gui-button" id="catalog-mobile">
+            <img src="img/grid.svg" alt="">
+            <span>Каталог</span>
+        </div>
+        
+        <a href="" class="mobile-gui-button">
+            <img src="img/heart.svg" alt="">
+            <span>Обрані</span>
+        </a>
+        
+        <div class="mobile-gui-button" id="mobilesettingsbutton">
+            <img src="img/settings.svg" alt="">
+            <span>Налаштування</span>
+        </div>
+
+        <a href="" class="mobile-gui-button">
+            <img src="img/cart.svg" alt="">
+            <span>Кошик</span>
+        </a>
+    </section>
+
+    <section class="lang-select none">
+        <div class="language-links">
+            <img src="img/cross.svg" class="close-lang">
+            <h1>Оберіть мову</h1>
+            <div class="flexbox">
+                <a href="" class="langlink">
+                    <span>UA</span>
+                    <img src="img/ukraine.svg">
+                </a>
+
+                <a href="" class="langlink">
+                    <span>EN</span>
+                    <img src="img/united-kingdom.svg">
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="langlink">
+                    <span>RU</span>
+                    <img src="img/russia.svg">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <img src="img/cross.svg" class="close-catalog">
+        <h1>Каталог</h1>
+    </section>
+
+    <section class="settings">
+        <img src="img/cross.svg" class="close-settings">
+        <h1>Налаштування</h1>
+    </section>
+
     <section class="landing-main">
         <section class="carousel">
             <div class="carousel-arrow-left"></div>
             <div class="carousel-arrow-right"></div>
         </section>
 
+        <section class="landing-categories">
+            <div class="categories-grid">
+                
+            </div>
+            
+        </section>
+
         <section class="landing-offers">
             <div class="flexbox">
-                <div class="offers-arrow-left"></div>
-                <div class="offers-arrow-right"></div>
+                <div class="arrows offers-arrow-left"></div>
+                <div class="arrows offers-arrow-right"></div>
             </div>
             <h1>Популярні товари</h1>
             <div class="offers-carousel"></div>
         </section>
+
+        <section class="landing-news">
+            <div class="flexbox">
+                <div class="arrows news-arrow-left"></div>
+                <div class="arrows news-arrow-right"></div>
+            </div>
+            <h1>Новинки</h1>
+            <div class="news-carousel"></div>
+        </section>
+    </section>
+
+    <section class="footer">
+        <div class="footer-divider"></div>
+
+        <div class="footer-container">
+            <img src="img/logo.svg" alt="" class="footer-logo">
+            <div class="footer-contacts">
+                <p>
+                    <span class="footer-label">Виникли питання? Зв'яжіться з нами!</span>
+                </p>
+                <p>
+                    <img src="img/phone.svg" alt="" class="footer-contact-image">
+                    <span>+380 12 345-67-89</span>
+                    |
+                    <span>+380 98 765-43-21</span>
+                </p>
+                <p>
+                    <img src="img/email.svg" alt="" class="footer-contact-image">
+                    <span>example@gmail.com</span>
+                    |
+                    <span>pryklad@ukr.net</span>
+
+                </p>
+                <p>
+                    <span>Соцмережі</span>
+                    <a href=""><img src="img/telegram.svg" alt="" class="footer-contact-image"></a>
+                    <a href=""><img src="img/viber.svg" alt="" class="footer-contact-image"></a>
+                    <a href=""><img src="img/instagram.svg" alt="" class="footer-contact-image"></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <span class="copyright">© ФОП Прізвище Ім'я По-батькові, 2024</span>
     </section>
 </body>
 <script src="script.js"></script>

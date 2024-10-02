@@ -92,6 +92,47 @@ document.querySelector('.carousel').addEventListener('mouseleave', ()=>{
 
 // =================================================================================================
 
+// Механизм популярных категорий начало
+
+let categories = [
+    {
+        img: 'img/offer_categories_test.jpg',
+        link: '404.html'
+    },
+
+    {
+        img: 'img/offer_categories_test.jpg',
+        link: '404.html'
+    },
+
+    {
+        img: 'img/offer_categories_test.jpg',
+        link: '404.html'
+    },
+
+    {
+        img: 'img/offer_categories_test.jpg',
+        link: '404.html'
+    }
+]
+
+for (let i = 0; i < categories.length; i++) {
+    let newObject = document.createElement('div')
+    newObject.classList.add('category-item')
+    let newImage = document.createElement('img')
+    newImage.src = categories[i].img
+    newImage.alt = categories[i].img
+    newObject.appendChild(newImage)
+    newObject.addEventListener('click', () => {
+        window.location.href = categories[i].link
+    })
+    document.querySelector('.categories-grid').appendChild(newObject)
+}
+
+// Механизм популярных категорий конец
+
+// =================================================================================================
+
 // Механизм популярных товаров начало
 
 let offers = [
@@ -197,7 +238,7 @@ document.querySelector('.offers-arrow-left').addEventListener('click', () => {
     
     setTimeout(() => {
         currentRemove.style.marginLeft = '0px';
-    }, 100);
+    }, 300);
 });
 
 document.querySelector('.offers-arrow-right').addEventListener('click', () =>{
@@ -207,51 +248,166 @@ document.querySelector('.offers-arrow-right').addEventListener('click', () =>{
         document.querySelector('.offers-carousel').removeChild(currentRemove1)
         document.querySelector('.offers-carousel').appendChild(currentRemove1)
         currentRemove1.style.marginLeft = '0px'
-    }, 1000)
+    }, 300)
 })
 
 // Механизм популярных товаров конец
 
+// =================================================================================================
 
+// Механизм новинок начало
 
+let newProducts = [
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 750,
+        link: '404.html'
+    },
 
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 800,
+        link: '404.html'
+    },
 
-// Адаптив старт
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 850,
+        link: '404.html'
+    },
 
-function checkWidth() {
-    let offersCards = document.querySelectorAll('.offers-carousel-item')
-    if (window.innerWidth <= 950 && window.innerWidth >= 601) {
-        offersCards[0].style.border = 'none'
-        offersCards[0].style.borderRight = '1px solid #d0d0d0'
-        for (let i = 0; i < offersCards.length; i++) {
-            if(i == 1){
-                document.querySelectorAll('.offers-carousel-item')[i].style.border = 'none'
-            }else if(i == offersCards.length - 1 && !isEven(offersCards.length)){
-                offersCards[i].style.border = 'none'
-                offersCards[i - 1].style.borderBottom = '1px solid #d0d0d0'
-                offersCards[i - 2].style.borderBottom = '1px solid #d0d0d0'
-            }else if(isEven(i) && i != 1 && i != 0 && i != document.querySelectorAll('.offers-carousel-item').length) {
-                offersCards[i].style.border = 'none'
-                offersCards[i].style.borderRight = '1px solid #d0d0d0'
-                offersCards[i].style.borderTop = '1px solid #d0d0d0'
-            }else if(!isEven(i) && i != 1 && i != 0 && i != document.querySelectorAll('.offers-carousel-item').length){
-                offersCards[i].style.border = 'none'
-                offersCards[i].style.borderTop = '1px solid #d0d0d0'
-            }
-        }
-    }else if(window.innerWidth <= 600){
-        for (let i = 0; i < offersCards.length; i++) {
-            offersCards[i].style.border = 'none'
-            offersCards[i].style.borderBottom = '1px solid #d0d0d0'
-            offersCards[offersCards.length - 1].style.borderBottom = 'none'
-        }
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 900,
+        link: '404.html'
+    },
+
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 950,
+        link: '404.html'
+    },
+
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 1000,
+        link: '404.html'
+    },
+
+    {
+        src: 'img/test_offer.webp',
+        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        price: 1050,
+        link: '404.html'
     }
-}
-function isEven(num) {
-    return num % 2 === 0;
+]
+
+for (let i = 0; i < newProducts.length; i++) {
+    let newObject = document.createElement('div')
+    newObject.classList.add('news-carousel-item')
+
+    // Обработчик клика на саму карточку
+    newObject.addEventListener('click', ()=>{
+        window.location.href = newProducts[i].link
+    })
+
+    let newImage = document.createElement('img')
+    newImage.src = newProducts[i].src
+    newImage.alt = newProducts[i].name
+
+    let newName = document.createElement('h3')
+    newName.textContent = newProducts[i].name
+
+    let objectFlexbox = document.createElement('div')
+    objectFlexbox.classList.add('flexbox-sp-btw')
+
+    let newPrice = document.createElement('h2')
+    newPrice.textContent = `${newProducts[i].price} грн`
+
+    let newButton = document.createElement('button')
+    let buttonImg = document.createElement('img')
+    buttonImg.src = 'img/cart.svg'
+    newButton.appendChild(buttonImg)
+
+    // Остановка всплытия события для кнопки
+    newButton.addEventListener('click', (event)=>{
+        event.stopPropagation()
+        // Здесь можно добавить логику для кнопки
+    })
+
+    newObject.appendChild(newImage)
+    newObject.appendChild(newName)
+    objectFlexbox.appendChild(newPrice)
+    objectFlexbox.appendChild(newButton)
+    newObject.appendChild(objectFlexbox)
+
+    document.querySelector('.news-carousel').appendChild(newObject)
 }
 
-window.addEventListener('resize', checkWidth);
-checkWidth();
+document.querySelector('.news-arrow-left').addEventListener('click', () => {
+    let currentRemove = document.querySelectorAll('.news-carousel-item')[document.querySelectorAll('.news-carousel-item').length - 1];
+    document.querySelector('.news-carousel').removeChild(currentRemove);
+    currentRemove.style.marginLeft = '-300px';
+    document.querySelector('.news-carousel').insertBefore(currentRemove, document.querySelectorAll('.news-carousel-item')[0]);
+    
+    setTimeout(() => {
+        currentRemove.style.marginLeft = '0px';
+    }, 300);
+});
 
-// Адаптив конец
+document.querySelector('.news-arrow-right').addEventListener('click', () =>{
+    let currentRemove1 = document.querySelectorAll('.news-carousel-item')[0]
+    currentRemove1.style.marginLeft = '-300px'
+    setTimeout(()=>{
+        document.querySelector('.news-carousel').removeChild(currentRemove1)
+        document.querySelector('.news-carousel').appendChild(currentRemove1)
+        currentRemove1.style.marginLeft = '0px'
+    }, 300)
+})
+
+// Механизм новинок конец
+
+// Хэдер старт
+
+document.querySelector("#settingsbutton").addEventListener("click", () => {
+    console.log(true)
+    document.querySelector(".settings").classList.add("settings-active")
+})
+document.querySelector("#mobilesettingsbutton").addEventListener("click", () => {
+    document.querySelector(".settings").classList.add("settings-active")
+})
+
+document.querySelector(".close-settings").addEventListener("click", () => {
+    document.querySelector(".settings").classList.remove("settings-active")
+})
+
+document.querySelector("#catalog").addEventListener("click", () => {
+    document.querySelector(".catalog").classList.add("catalog-active")
+})
+
+document.querySelector("#catalog-mobile").addEventListener("click", () => {
+    document.querySelector(".catalog").classList.add("catalog-active")
+})
+
+document.querySelector(".close-catalog").addEventListener("click", () => {
+    document.querySelector(".catalog").classList.remove("catalog-active")
+})
+
+document.querySelector(".lang").addEventListener("click", () => {
+    document.querySelector(".lang-select").classList.remove("none")
+})
+
+document.querySelector(".close-lang").addEventListener("click", () => {
+    document.querySelector(".lang-select").classList.add("none")
+})
+
+// Хэдер конец
+
+
+
