@@ -1,15 +1,59 @@
+@font-face{
+  font-family: regular;
+  src: url(fonts/Manrope-Regular.ttf);
+}
+@font-face{
+  font-family: logo;
+  src: url(fonts/ChailceNogginRegular-2OXoW.ttf);
+}
+
+*{
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
 body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: regular;
+  overflow-x: hidden;
+  background: #ffffff;
+  min-height: 10000px;
+}
+h1, h2, h3, h4, h5, h6{
   padding: 0;
   margin: 0;
 }
-.main{
-  width: 88vw;
-  margin: auto;
+.flexbox{
+  display: flex;
 }
+.flexbox-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexbox-sp-btw{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.landing-main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+
+
 .carousel{
   width: 1200px !important;
   height: 520px !important;
-  margin: auto;
+  margin-top: 30px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -31,6 +75,8 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   background: url(img/arrow.svg);
+  opacity: 0;
+  transition: all .3s linear;
 }
 .carousel-arrow-left:hover, .carousel-arrow-right:hover{
   background: url(img/arrow-hover.svg);
@@ -44,4 +90,156 @@ body{
   top: calc((100% - 50px) / 2);
   right: 15px;
   transform: rotateY(180deg);
+}
+
+
+
+.landing-offers{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+  position: relative;
+}
+.landing-offers h1{
+  font-size: 26px;
+  margin: auto;
+}
+.offers-carousel{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.offers-carousel-item{
+  width: calc(300px - 20px * 2);
+  height: calc(100% - 15px * 2);
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+  border-right: 1px solid #d0d0d0;
+  transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.offers-carousel-item h3{
+  font-size: 16px;
+  text-align: center;
+}
+.offers-carousel-item h2{
+  font-size: 22px;
+  text-align: right;
+  font-weight: 700;
+}
+.offers-carousel-item .flexbox-sp-btw{
+  height: 50px;
+  align-items: center;
+}
+.offers-carousel-item button{
+  width: 30%;
+  height: 90%;
+  background-color: #415f7c;
+  border-radius: .3em;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offers-carousel-item button:hover{
+  background-color: #364f66;
+}
+.offers-carousel-item button img{
+  height: 25px;
+}
+.landing-offers .flexbox{
+  gap: 15px !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.offers-arrow-left, .offers-arrow-right{
+  width: 35px;
+  height: 35px;
+  z-index: 1;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: url(img/arrow.svg);
+  opacity: 1;
+  transition: all .3s linear;
+}
+.offers-arrow-right{
+  transform: rotate(180deg);
+}
+.offers-arrow-left:hover, .offers-arrow-right:hover{
+  background: url(img/arrow-hover.svg);
+}
+
+
+
+
+@media (max-width: 1250px) {
+  .carousel{
+    width: 900px !important;
+    height: 433px !important;
+  }
+  .landing-offers{
+    width: 900px !important;
+  }
+}
+@media (max-width: 951px) {
+  .carousel{
+    width: 800px !important;
+    height: 347px !important;
+  }
+  .landing-offers{
+    width: 90% !important;
+  }
+  .offers-carousel{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .offers-carousel-item{
+    width: calc(49% - 20px * 2);
+  }
+  .offers-arrow-left, .offers-arrow-right{
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .carousel{
+    display: none !important;
+  }
+}
+@media (max-width: 601px) {
+  .landing-offers{
+    margin-top: 30px;
+    width: 50vw !important;
+    justify-content: center;
+  }
+  .offers-carousel-item{
+    width: calc(100% - 20px * 2);
+    border-top: 1px solid #d0d0d0;
+  }
+}
+@media (max-width: 511px) {
+  .landing-offers{
+    width: 70vw !important;
+  }
+  .offers-carousel-item{
+    width: calc(100% - 20px * 2);
+  }
+}
+@media (max-width: 371px) {
+  .landing-offers{
+    width: 90vw !important;
+  }
+  .offers-carousel-item{
+    width: calc(100% - 20px * 2);
+  }
 }
