@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/product.css">
+</head>
+<body>
+    <section class="header">
+        <div class="gap15">
+            <img src="img/logo.svg" alt="logo" class="logo">
+            <h1>Vape Oreon</h1>
+            <div id="catalog">
+                <img src="img/grid.svg">
+                <span>Каталог</span>
+            </div>
+        </div>
+        
+        <div class="search">
+            <img src="img/search.svg" alt="">
+            <input type="text" class="search-field" placeholder="Я шукаю...">
+            <div class="search-button">Search</div>
+        </div>
+        
+        <div class="gap15">
+            <div class="lang header-button">
+                <h3>UA</h3>
+                <img src="img/ukraine.svg" alt="" class="planet">
+            </div>
+            <a href=""><img src="img/user.svg" alt="" class="header-button" id="userbutton"></a>
+            <a href=""><img src="img/heart.svg" alt="" class="header-button" id="favoritebutton"></a>
+            <img src="img/settings.svg" alt="" class="header-button" id="settingsbutton">
+            <a href=""><img src="img/cart.svg" alt="" class="header-button" id="cartbutton"></a>
+        </div>
+    </section>
+    <p class="navigation">
+        <a href="index.html">Головна</a>
+        <span>></span>
+        <a href="404.html">Рідини для POD-систем</a>
+        <span>></span>
+        <a href="product.html">Elf Liq 30 мл</a>
+    </p>
+
+    <section class="mobile-gui">
+        <a href="" class="mobile-gui-button">
+            <img src="img/menu.svg" alt="">
+            <span>Меню</span>
+        </a>
+
+        <div class="mobile-gui-button" id="catalog-mobile">
+            <img src="img/grid.svg" alt="">
+            <span>Каталог</span>
+        </div>
+        
+        <a href="" class="mobile-gui-button">
+            <img src="img/heart.svg" alt="">
+            <span>Обрані</span>
+        </a>
+        
+        <div class="mobile-gui-button" id="mobilesettingsbutton">
+            <img src="img/settings.svg" alt="">
+            <span>Налаштування</span>
+        </div>
+
+        <a href="" class="mobile-gui-button">
+            <img src="img/cart.svg" alt="">
+            <span>Кошик</span>
+        </a>
+    </section>
+
+    <section class="product">
+        <div class="flexbox">
+            <div class="flexbox-column">
+                <img src="img/bigproduct-test-1.jpg" alt="Vaporesso XROS 4 mini" class="product-preview">
+                <div class="product-imglist">
+                    <img class="product-imglist-item" src="img/bigproduct-test-1.jpg" alt="Vaporesso XROS 4 mini">
+                    <img class="product-imglist-item" src="img/bigproduct-test-2.jpg" alt="Vaporesso XROS 4 mini">
+                    <img class="product-imglist-item" src="img/bigproduct-test-3.jpg" alt="Vaporesso XROS 4 mini">
+                    <img class="product-imglist-item" src="img/bigproduct-test-1.jpg" alt="Vaporesso XROS 4 mini">
+                    <img class="product-imglist-item" src="img/bigproduct-test-2.jpg" alt="Vaporesso XROS 4 mini">
+                    <img class="product-imglist-item" src="img/bigproduct-test-3.jpg" alt="Vaporesso XROS 4 mini">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="product-name">Рідина Elf Liq 30 мл на сольовому нікотині</h1>
+                <span>Артикул: <span id="product-article">123456</span></span> <br>
+                <span>Бренд: <a href="404.html" id="brand">Elf Liq</a></span>
+                <div class="flexbox-column product-info-offers-container">
+                    <h2>Смак:</h2>
+                    <div class="product-info-offers">
+                        <a href="404.html">Pink Grapefruit</a>
+                        <a href="404.html">Pink Lemonade</a>
+                        <a href="404.html">Watermelon</a>
+                        <a href="404.html">Cotton Candy Ice</a>
+                        <a href="404.html">Blue Razz Lemonade</a>
+                        <a href="404.html">Cream Tobacco</a>
+                        <a href="404.html">Blueberry</a>
+                        <a href="404.html">Apple Peach</a>
+                        <a href="404.html">Spearmint</a>
+                        <a href="404.html">Kivi Passion Fruit Guava</a>
+                        <a href="404.html">Blueberry Sour Raspberry</a>
+                    </div>
+                </div>
+
+                
+                <div class="flexbox-column product-info-offers-container">
+                    <h2>Міцність:</h2>
+                    <div class="product-info-offers">
+                        <a href="404.html">30 мг</a>
+                        <a href="404.html">50 мг</a>
+                        <a href="404.html">65 мг</a>
+                    </div>
+                </div>
+                
+                <div class="buy-container">
+                    <div class="flexbox-column">
+                        <button id="add-to-favorite"><img src="img/product-fav-unactive.svg" alt=""></button>
+                        <span id="is-product-available">Є в наявності ✔</span>
+                        <h1 id="price">350 грн</h1>
+                        <button id="add-to-cart"><img src="img/cart.svg" alt=""> Додати до кошика</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

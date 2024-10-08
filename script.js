@@ -138,51 +138,51 @@ for (let i = 0; i < categories.length; i++) {
 let offers = [
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 750,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 800,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 850,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 900,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 950,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 1000,
-        link: '404.html'
+        link: 'product.html'
     },
 
     {
         src: 'img/test_offer.webp',
-        name: 'Стартовый набор Vaporesso XROS 4 mini (Original)',
+        name: 'Стартовый набор Vaporesso XROS 4 mini',
         price: 1050,
-        link: '404.html'
+        link: 'product.html'
     }
 ]
 
