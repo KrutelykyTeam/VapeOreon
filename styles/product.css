@@ -196,7 +196,7 @@ body{
 }
 
 .desc-container{
-    width: calc(95% - 20px * 2);
+    width: calc(95% - 15px * 2);
     padding: 20px;
     padding-left: 40px;
     padding-right: 30px;
@@ -263,7 +263,7 @@ body{
     background: #ededed;
     border: 1px solid #ededed;
 }
-#characs_prop, #characs_value{
+.characs_prop, .characs_value{
     width: calc(50% - 5px - 20px);
     padding: 5px;
     padding-left: 20px;
@@ -329,6 +329,12 @@ body{
         padding-left: 20px;
         padding-right: 20px;
     }
+    .desc-container{
+        width: 90%;
+        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .product-info-offers-container{
         width: 400px;
     }
@@ -358,8 +364,11 @@ body{
     }
 }
 @media (max-width: 1000px) {
+    .product{
+        width: 100%;
+    }
     .product-info-offers-container{
-        width: 320px;
+        width: 380px;
     }
     .miniproduct-colon{
         display: none;
@@ -374,14 +383,34 @@ body{
         width: 400px;
     }
     .product-info-offers{
+        width: 400px;
+    }
+    .buy-container{
+        width: 380px;
+    }
+}
+@media (max-width: 835px) {
+    .product-info-offers-container{
+        width: 320px;
+    }
+    .miniproduct-colon{
+        display: none;
+    }
+    .product-info{
+        width: 340px;
+    }
+    .product-info-offers{
         width: 340px;
     }
     .buy-container{
-        width: 300px;
+        width: 320px;
     }
 }
-
 @media (max-width: 750px){
+    .product{
+        width: calc(100% - 15px * 2);
+        padding: 15px;
+    }
     .product .flexbox{
         flex-direction: column;
     }
@@ -397,7 +426,8 @@ body{
         width: 100% !important;
     }
     .product-info{
-        width: 100%;
+        width: calc(100% - 20px * 2);
+        padding: 20px;
     }
     #product-name{
         text-align: center;
@@ -412,6 +442,31 @@ body{
         width: calc(100% - 10px * 2) !important;
     }
 } 
+@media (max-width: 380px) {
+    .product{
+        padding: 10px;
+    }
+    .product-info{
+        padding: 0px;
+    }
+    .product-info-offers{
+        padding: 10px;
+    }
+    .product-info-offers a{
+        font-size: 13px;
+    }
+    .navigation{
+        padding-left: 10px !important;
+        gap: 3px !important;
+    }
+    .navigation a{
+        font-size: 12px;
+    }
+    .buy-container{
+        width: 105% !important;
+        margin: auto;
+    }
+}
 
 
 .footer{
