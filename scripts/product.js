@@ -100,7 +100,8 @@ let product = {
 
 // Подгрузка товара старт
 
-productName.innerHTML = product.name // Подгрузка названия
+productName.innerHTML = product.name      // Подгрузка названия
+miniProduct.name.innerHTML = product.name // ↑↑↑
 
 for (let i = 0; i < product.images.length; i++) {
     let newImage = document.createElement('img')
@@ -111,6 +112,8 @@ for (let i = 0; i < product.images.length; i++) {
     newImage.addEventListener('click', (e)=>{
         productPreview.src = newImage.src
         productPreview.alt = newImage.alt
+        miniProduct.preview.src = newImage.src
+        miniProduct.preview.alt = newImage.alt
     })
 } // Подгрузка всех картинок
 
